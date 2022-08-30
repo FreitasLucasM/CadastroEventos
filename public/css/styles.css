@@ -1,0 +1,179 @@
+/*gerais */
+* {
+    font-family: "Roboto";
+}
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+header {
+    background-color: #fff;
+    border-bottom: #ccc;
+}
+.row {
+    margin: 0;
+}
+.cointainer-fluid {
+    padding: 0;
+}
+/*botão */
+.btn-primary {
+    margin-top: 10px;
+    position: relative;
+    background-color: rgba(168, 7, 7, 0.877);
+    border: 2px solid rgb(109, 1, 1);
+}
+.btn-primary:hover {
+    background-color: rgb(109, 1, 1);
+    border: 2px solid rgb(109, 1, 1);
+}
+/*navbar */
+#navbar img {
+    width: 40px;
+}
+#navbar {
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 0;
+}
+#navbar a {
+    font-size: 16px;
+    color: #757575;
+}
+#navbar a:hover {
+    color: rgb(109, 1, 1);
+}
+
+/*search container*/
+#search-container {
+    background-image: url("/img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    padding: 50px;
+    text-align: center;
+}
+#search-container h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+#seach-container form {
+    width: 50%;
+    margin: 0 auto;
+}
+#search {
+    height: 5vh;
+}
+#search:focus {
+    height: 5vh;
+    border-color: rgb(109, 1, 1);
+    box-shadow: 0 0 10px rgb(109, 1, 1);
+}
+/*search container*/
+#events-container {
+    padding: 50px;
+}
+#events-container h2 {
+    margin-bottom: 10px;
+}
+#events-container .subtitle {
+    margin-bottom: 30px;
+}
+#cards-container {
+    display: flex;
+}
+#events-container .card {
+    flex: 1 1 24%;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0.5%;
+}
+#events-container img {
+    max-height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card .card-date {
+    font-size: 12px;
+    color: #ccc;
+}
+.card .card-title {
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.card-participants {
+    font-size: 14px;
+    color: #757575;
+}
+/*event create page*/
+#event-create-container {
+    padding: 30px;
+}
+#event-create-container label {
+    font-weight: bold;
+}
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+    margin: 5px;
+    font-size: 12px;
+}
+/*footer*/
+footer {
+    text-align: center;
+    background-color: #353e48;
+    color: #fff;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+}
+/*flash message*/
+.msg {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+/*Event Page */
+#image-container,
+#info-container {
+    margin-top: 30px;
+}
+
+#image-container img {
+    border-radius: 10px;
+}
+#info-container h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+#info-container p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+}
+#info-container h3,
+#info-description h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+#info-container ion-icon {
+    font-size: 20px;
+    color: rgb(109, 1, 1);
+    margin-right: 5px;
+}
+#info-container #event-submit {
+    margin: 20px 0;
+}
