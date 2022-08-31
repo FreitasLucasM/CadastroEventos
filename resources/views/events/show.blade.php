@@ -17,13 +17,27 @@
                 <ion-icon name="people-outline"></ion-icon>X participantes
             </p>
             <p class="event-owner">
-                <ion-icon name="star-outline"></ion-icon>Dono do Evento
+                <ion-icon name="star-outline"></ion-icon>{{$eventOwner->name}}
             </p>
-            <a href="#" class="btn btn-primary" id="event-submit">Confirmar Presença</a>
+            <p class="event-date">
+                <ion-icon name="flag-outline"></ion-icon>{{date('d/m/Y', strtotime($event->date))}}
+            </p>
+
+            <a href="#" class="btn btn-primary" id="event-submit">
+                <ion-icon name="person-add-outline"></ion-icon>Confirmar Presença
+            </a>
+            <h3>O evento conta com:</h3>
+            <ul id="items-list">
+                @foreach($event->items as $item)
+                <li class="event-owner">
+                    <ion-icon name="menu-outline"></ion-icon>{{$item}}
+                </li>
+                @endforeach
+            </ul>
         </div>
-        <div class="col-md-12" id="description-container">
+        <div class="col-md-12" id="info-description">
             <h3>Sobre o Evento</h3>
-            <p class="event-description">{{$event->description}}</p>
+            <p class="description-container">{{$event->description}}</p>
         </div>
     </div>
 

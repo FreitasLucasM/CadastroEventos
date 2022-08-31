@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\EventController;
+use GuzzleHttp\Middleware;
 
 Route::get('/', [EventController::class, 'index']);
-Route::get('/events/create', [EventController::class, 'criar']);
+Route::get('/events/create', [EventController::class, 'criar'])->middleware('auth');
 Route::post('/events', [EventController::class, 'store']);
 Route::get('/events/view', [EventController::class, 'eventos']);
 Route::get('/events/view/{id}', [EventController::class, 'show']);
-Route::get('/signin', [EventController::class, 'logar']);
-Route::get('/signup', [EventController::class, 'cadastrar']);
-
+Route::delete('/events/view/{id}', [EventController::class, 'destroy']);
+Route::get('/dashboard', [EventController::class, 'myDashboard'])->middleware('auth');
