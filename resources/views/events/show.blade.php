@@ -14,7 +14,7 @@
                 <ion-icon name="location-outline"></ion-icon>{{$event->city}}
             </p>
             <p class="event-participants">
-                <ion-icon name="people-outline"></ion-icon>X participantes
+                <ion-icon name="people-outline"></ion-icon>{{count($event->users)}} Participantes
             </p>
             <p class="event-owner">
                 <ion-icon name="star-outline"></ion-icon>{{$eventOwner->name}}
@@ -22,10 +22,12 @@
             <p class="event-date">
                 <ion-icon name="flag-outline"></ion-icon>{{date('d/m/Y', strtotime($event->date))}}
             </p>
-
-            <a href="#" class="btn btn-primary" id="event-submit">
-                <ion-icon name="person-add-outline"></ion-icon>Confirmar Presença
-            </a>
+            <form action="/events/participate/{{$event->id}}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-primary">
+                    <ion-icon name="person-add-outline"></ion-icon>Confirmar Presença
+                </button>
+            </form>
             <h3>O evento conta com:</h3>
             <ul id="items-list">
                 @foreach($event->items as $item)

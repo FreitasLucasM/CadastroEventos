@@ -198,6 +198,15 @@ footer p {
     text-align: center;
     padding: 10px;
 }
+.alert {
+    background-color: #eff3bb;
+    color: rgb(41, 44, 2);
+    border: 1px solid #f3e69b;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
 /*Event Page */
 #image-container,
 #info-container {
@@ -251,4 +260,10 @@ footer p {
 }
 .dashboard-events-container form {
     display: inline-block;
+}
+
+/*edit page*/
+.img-preview {
+    width: 100px;
+    margin-top: 20px;
 }

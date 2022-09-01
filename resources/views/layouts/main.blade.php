@@ -65,6 +65,9 @@
                 @if(session('msg'))
                 <p class="msg">{{session('msg')}}</p>
                 @endif
+                @if(session('alert'))
+                <p class="alert">{{session('alert')}}</p>
+                @endif
                 @yield('content')
             </div>
         </div>

@@ -21,5 +21,9 @@ Route::get('/events/create', [EventController::class, 'criar'])->middleware('aut
 Route::post('/events', [EventController::class, 'store']);
 Route::get('/events/view', [EventController::class, 'eventos']);
 Route::get('/events/view/{id}', [EventController::class, 'show']);
-Route::delete('/events/view/{id}', [EventController::class, 'destroy']);
+Route::delete('/events/view/{id}', [EventController::class, 'destroy'])->middleware('auth');
+Route::get('/events/edit/{id}', [EventController::class, 'edit'])->middleware('auth');
+Route::put('/events/update/{id}', [EventController::class, 'update'])->middleware('auth');
+Route::post('/events/participate/{id}', [EventController::class, 'participate'])->middleware('auth');
+Route::delete('/events/leave/{id}', [EventController::class, 'delete'])->middleware('auth');
 Route::get('/dashboard', [EventController::class, 'myDashboard'])->middleware('auth');
